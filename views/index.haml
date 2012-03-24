@@ -1,0 +1,16 @@
+!!! XML
+!!!
+%html
+  %head
+    %meta{ :content => "text/html", :charset => "utf-8" }
+    %title ATND検索
+  %body
+    -# main
+    %h1 ATND検索
+    %div キーワードを入力してね
+
+    -# 入力フォーム
+    %form{ :action => "/result", :method => "post" }
+      %input{ :type => "textfield", :name => "keyword" }
+      %input{ :type => "submit", :value => "send" }
+    
