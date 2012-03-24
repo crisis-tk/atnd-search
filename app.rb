@@ -14,7 +14,7 @@ get '/' do
 end
 
 post '/result' do
-  keyword = params[:keyword]
+  keyword = params[:keyword].gsub!(' ', ',')
   request_url = "http://api.atnd.org/events/?format=json&keyword=#{keyword}"
 
   uri = URI.encode(request_url)
