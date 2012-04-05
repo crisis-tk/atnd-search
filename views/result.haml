@@ -3,13 +3,19 @@
 %html
   %head
     %meta{ :content => "text/html", :charset => "utf-8" }
-    %title ATND検索
+    %title ATND & Zusaar検索
   %body
     -# main
-    %h1 ATND検索
-    %div 検索結果
+    %h1 ATND & Zusaar検索
+    %h2 検索結果
 
     -# 検索結果
+    %h4 ATND
     %ul
-      - @events.each do |event|
+      - @atnd_events.each do |event|
+        %li= event
+
+    %h4 Zusaar
+    %ul
+      - @zusaar_events.each do |event|
         %li= event
